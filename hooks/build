@@ -1,1 +1,10 @@
+#!/bin/bash
+
+# e: Exit when first line is an error
+set -e
+echo "IMAGE_NAME: $IMAGE_NAME"
+echo "DOCKER_REPO: $DOCKER_REPO"
+echo "DOCKERFILE_PATH: $DOCKERFILE_PATH"
+echo "DOCKER_TAG: $DOCKER_TAG"
+
 docker build --build-arg REDIS_VERSION=$DOCKER_TAG -f $DOCKERFILE_PATH -t $IMAGE_NAME .
