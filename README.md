@@ -1,5 +1,5 @@
-Forked from [Goodsmileduck/redis-cli](https://github.com/Goodsmileduck/redis-cli) to provide more redis versions.
-
+Forked from [Goodsmileduck/redis-cli](https://github.com/Goodsmileduck/redis-cli) to provide redis-cli based on all Redis versions available in 
+[Redis downloads](http://download.redis.io/releases/)
 
 
 # Getting started
