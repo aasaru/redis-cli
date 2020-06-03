@@ -7,6 +7,7 @@ ARG REDIS_DOWNLOAD_URL="http://download.redis.io/releases/redis-${REDIS_VERSION}
 
 RUN apk update && apk upgrade \
     && apk add --update --no-cache --virtual build-deps gcc make linux-headers musl-dev tar \
+    && echo "Downloading redis from $REDIS_DOWNLOAD_URL" \
     && wget -O redis.tar.gz "$REDIS_DOWNLOAD_URL" \
     && mkdir -p /usr/src/redis \
     && tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1 \

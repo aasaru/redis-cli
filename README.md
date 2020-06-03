@@ -11,13 +11,15 @@ Forked from [Goodsmileduck/redis-cli](https://github.com/Goodsmileduck/redis-cli
 Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/aasaru/redis-cli) and is the recommended method of installation.
 
 ```bash
-docker pull aasaru/redis-cli:latest
+docker pull aasaru/redis-cli:6.0.4
 ```
+where 6.0.4 is your desired Redis version.
+
 
 Alternatively you can build the image yourself.
 
 ```bash
-docker build -t aasaru/redis-cli github.com/aasaru/redis-cli
+docker build -t aasaru/redis-cli github.com/aasaru/redis-cli --build-arg REDIS_VERSION=6.0.4
 ```
 
 ## Quickstart
