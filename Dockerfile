@@ -1,5 +1,4 @@
 FROM alpine
-MAINTAINER Stanislav Serebrennikov <goodsmileduck@gmail.com>
 
 ARG DOCKER_TAG="stable"
 ARG REDIS_VERSION="${DOCKER_TAG}"
