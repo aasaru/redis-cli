@@ -8,7 +8,7 @@ Forked from [Goodsmileduck/redis-cli](https://github.com/Goodsmileduck/redis-cli
 
 ## Installation
 
-Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/aasaru/redis-cli) and is the recommended method of installation.
+Automated builds of the image are available on [Dockerhub](https://hub.docker.com/r/aasaru/alpine-redis-cli) and is the recommended method of installation.
 
 ```bash
 docker pull aasaru/redis-cli:6.0.4
