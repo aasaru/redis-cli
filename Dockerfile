@@ -1,7 +1,6 @@
 FROM alpine
 
-ARG DOCKER_TAG="stable"
-ARG REDIS_VERSION="${DOCKER_TAG}"
+ARG REDIS_VERSION
 ARG REDIS_DOWNLOAD_URL="http://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz"
 
 RUN apk update && apk upgrade \
