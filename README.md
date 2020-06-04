@@ -1,9 +1,6 @@
-Forked from [Goodsmileduck/redis-cli](https://github.com/Goodsmileduck/redis-cli) to provide redis-cli based on all Redis versions available in 
-[Redis downloads](http://download.redis.io/releases/)
+# About
 
-
-# Getting started
-
+Redis-Cli on Alpine with TLS support. 
 
 
 ## Installation
@@ -27,14 +24,20 @@ docker build -t aasaru/alpine-redis-cli github.com/aasaru/alpine-redis-cli --bui
 Try connect alpine-redis-cli to localhost with default port :
 
 ```bash
-docker run --name alpine-redis-cli -it aasaru/alpine-redis-cli
+docker run --rm --name redis-cli -it aasaru/alpine-redis-cli redis-cli -h localhost -p 6379
 ```
 
-## Command-line arguments
-
-You can customize the launch command of Redis server by specifying arguments to `alpine-redis-cli` on the `docker run` command. For example the following command will ping to `hostname` with port `6379` and will delete container after finish:
+And same with TLS:
 
 ```bash
-docker run --rm --name alpine-redis-cli --it aasaru/alpine-redis-cli alpine-redis-cli -h hostname -p 6379 ping
+docker run --rm --name redis-cli -it aasaru/alpine-redis-cli redis-cli -h localhost -p 6379 --tls --cacert ./certs/ca_certificate.pem --cert ./certs/client_certificate.pem --key ./certs/client_key.pem ping
 ```
 
+
+# Origin
+
+Forked from [Goodsmileduck/redis-cli](https://github.com/Goodsmileduck/redis-cli)
+with following improvements
+* enable TLS support
+* make Redis version configurable as build arg
+* in Dockerhub provide redis-cli images based on all recent Redis versions available in [Redis downloads](http://download.redis.io/releases/)
